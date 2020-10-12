@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!-- Game javascript -->
+
+    <script type="text/javascript" src="./resource/js/jquery-3.4.1.slim.min.js"></script>
+    <script type="text/javascript" src="./resource/js/app.js"></script>
+
+
+    <!-- date picker -->
+
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <link href="./resource/css/jquery.datepicker2.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+        crossorigin="anonymous"></script>
+    <script src="./resource/js/jquery.datepicker2.js"></script> -->
+
+
+    <!-- validate register form -->
+
+    <script src="jquery-validation-1.19.1/lib/jquery.js"></script>
+    <script src="jquery-validation-1.19.1/dist/jquery.validate.js"></script>
+
+    <!--jQuery modal-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="./resource/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- javascript -->
+    <script type="text/javascript" src="./resource/js/welcomePage.js"></script>
+
+    <link rel="shortcut icon" href="#" />
+
+
+</head>
+
+<body>
+
+
+    <!-- Main Window div-->
+    <div class="mainWindow" id="mainWindow">
+
+      
+        <!-- logo div-->
+        <div class="logo" id="logo">
+            <img class="headerImg1" src="./resource/css/img/22.png">
+            <p class="headerInfo" style="float: left;">Doron Shamai <br> 312538325</p>
+            <img class="headerImg2" src="./resource/css/img/23.png">
+            <p class="headerInfo"  style="float: right;">Oscar Epshtein <br> 206228462</p>
+            <img class="imagePacman" src="./resource/css/img/pacman.png">
+            <img src="./resource/css/img/logo.png"  id="logoImg" alt="pacslogo">
+          
+        </div>
+
+        <!-- nav div-->
+
+        <div class="nav" id="nav">
+            <!-- <img class="imagePacman" src="./resource/css/img/pacman.png"> -->
+            <button class="mainBtn" id="welcomPage">Welcome</button>
+            <button class="mainBtn" id="registerPage">Register</button>
+            <button class="mainBtn" id="loginPage">Login</button>
+
+
+            <!-- About div-->
+            <div class="btn_text">
+                <a href="#AboutBtn" rel="modal:open" class="mainBtn_a">About</a>
+                <div id="AboutBtn" class="modal">
+                    <p>
+                        Created by:<br>
+                         <strong>Oscar</strong> and <strong>Doron</strong>
+                         <br><br>
+
+                        Plugin: <br>
+                        jQuery: <a href=http://www.jquerybyexample.net/2012/06/jquery-string-functions.html>
+                            jQuery</a><br>
+                        modal tools: <a href="http://jquerytools.org">Tools</a><br><br>
+                        <br>
+                        Difficulties: <br>
+                        Our first and main difficulty was working parallel without being able to meet,
+                        this made the work much harder than it could have been.<br>
+                        The second difficulty to write the data validation in using the jQuery plugin.
+                    </p>
+                    <a href="#" style="margin-top: 5rem;" class="closeBtn" rel="modal:close">Close</a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Welcome Page div-->
+        <div class="WelcomePage" id="welcome">
+
+            <!-- <p id="welcomeText"> ♥ ᗯEᒪᑕOᗰE TO Oᑌᖇ ᑭᗩᑕᗰᗩᑎ GᗩᗰE ♥  </p>
+            <p id="welcomeText"> ᖇEᗩᗪY TO ᑭᒪᗩY?</p>
+            <p id="welcomeText">First time here?        </p> -->
+            <p id="welcomeText">♥ WELCOME TO OUR PACMAN GAME ♥</p>
+           
+            <p id="welcomeText">FIRST TIME HERE?</p>
+
+            <button class="ConnectBtn" id="RegisterBtn">Register</button>
+
+            <p id="welcomeText">READY TO PLAY?</p>
+
+            <button class="ConnectBtn" id="LoginBtn">Login</button>
+           
+
+
+        </div>
+
+        <!-- Register Page -->
+        <div class="registerPage" id=register>
+
+            <form class="cmxform" id="signupForm" method="get" action="">
+                <p id="welcomeText" style="font-size: 30px;">Sign up</p>
+                <fieldset>
+                   
+                    <p>
+                        <label for="firstname">Firstname</label>
+                        <input id="firstname" name="firstname" type="text">
+                    </p>
+                    <p>
+                        <label for="lastname">Lastname</label>
+                        <input id="lastname" name="lastname" type="text">
+                    </p>
+                    <p>
+                        <label for="username">Username</label>
+                        <input id="username" name="username" type="text">
+                    </p>
+                    <p>
+                        <label for="password">Password</label>
+                        <input id="password" name="password" type="password">
+                    </p>
+                    <p>
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email">
+                    </p>
+                    <p>
+                        <label for="date">Birthday Date</label>
+                        <input id="date" name="date" type="date">
+                        <!-- <input type="text" class="form-control" name="date" id="date" placeholder="Your Birthday Date"
+                        data-select="datepicker"> -->
+
+                    </p>
+                    <p>
+                        <input  class="submit" type="submit" value="Submit">
+                    </p>
+                    <script type="text/javascript" src="./resource/js/registerPage.js"></script>
+
+                </fieldset>
+            </form>
+
+        </div>
+
+
+        <!-- Login Page -->
+
+        <div class="loginPage" id="login" >
+            <form class="cmxform" id="loginForm" method="get" action="">
+                <p id="welcomeText" style="font-size: 30px;">Sign in</p>
+                <fieldset>
+                    
+                    <p>
+                        <label for="username_login">Username</label>
+                        <input id="username_login" name="username_login" type="text">
+                    </p>
+                    <p>
+                        <label for="password_login">Password</label>
+                        <input id="password_login" name="password_login" type="password">
+                    </p>
+                    <p>
+                        <input  class="submit" type="submit" value="Login">
+                    </p>
+                    <!-- <script type="text/javascript" src="./resource/js/registerPage.js"></script> -->
+
+                </fieldset>
+            </form>
+            <script type="text/javascript" src="./resource/js/loginPage.js"></script>
+        </div>
+
+        <!-- Setting Page div-->
+        <div class="SettingPage" id="settings">
+            <form id="settingsForm">
+                <fieldset>
+                    <p>
+                        <label>Set randomize settings:</label>
+                        <button id="randomBtn" type="button" onclick="randomSettings()">Random Settings</button>
+                    </p>
+                    <p>
+                        <label for="up">Up key:</label>
+                        <input type="text" onkeypress="return false;" autocomplete="off" id="up" name="up"
+                            placeholder="Press key for move up" onkeydown="gameControlers(event , 'up')">
+                    </p>
+                    <p>
+                        <label for="down">Down key:</label>
+                        <input type="text" onkeypress="return false;" autocomplete="off" id="down" name="down"
+                            placeholder="Press key for move down" onkeydown="gameControlers(event , 'down')">
+                    </p>
+                    <p>
+                        <label for="right">Right key:</label>
+                        <input type="text" onkeypress="return false;" autocomplete="off" id="right" name="right"
+                            placeholder="Press key for move right" onkeydown="gameControlers(event , 'right')">
+                    </p>
+                    <p>
+                        <label for="left">Left key:</label>
+                        <input type="text" onkeypress="return false;" autocomplete="off" id="left" name="left"
+                            placeholder="Press key for move left" onkeydown="gameControlers(event , 'left')">
+                    </p>
+                    <p>
+                        <label for="ballsNumber">Number of balls:</label>
+                        <input type="number" id="ballsNumber" name="ballsNumber" min=50 max=90 value="50">
+
+                    </p>
+                    <!-- <p>
+                        <label for="numberOfBalls">Number of balls:</label>
+                        <input type="range" id="rangeInput" name="rangeInput" min="50" max="90" value="50"
+                            oninput="amount.value=rangeInput.value">
+
+                        <output id="amount" name="amount" for="rangeInput" class="slider">50</output>
+                    </p> -->
+                    <p>
+                        <label for="Ball_5Point">Choose color for 5 points ball:</label>
+                        <input type="color" id="Ball_5Point" name="Ball_5Point" value="#55aecc">
+                    </p>
+                    <p>
+                        <label for="Ball_15Point">Choose color for 15 points ball:</label>
+                        <input type="color" id="Ball_15Point" name="Ball_15Point" value="#d275d5">
+                    </p>
+                    <p>
+                        <label for="Ball_25Point">Choose color for 25 points ball:</label>
+                        <input type="color" id="Ball_25Point" name="Ball_25Point" value="#43e45b">
+                    </p>
+                    <p>
+                        <label>Set time for the game (measured in seconds):</label>
+                        <input type="number" id="gameTimer" name="gameTimer" min="60" value="60">
+                    </p>
+                    <p>
+                        <label>Number of monsters:</label>
+                        <input type="number" id="monstersNumber" min="1" max="4" value="1"><br>
+                    </p>
+                    <!-- <button class="submit" type="submit" value="Start Game!"></button> -->
+                    <p>
+                        <input class="submit" type="submit" onclick="playAudio()" value="Start Game!">
+                    </p>
+
+                </fieldset>
+                <script type="text/javascript" src="./resource/js/settingsPage.js"></script>
+            </form>
+
+        </div>
+
+        <!-- Game Page div-->
+        <div class="gamePage" id="gamePage">
+
+            <div id="settingsBoard">
+                <!-- <label id="gameUser"></label> -->
+                <div id="score">
+                    <p>
+                    <label for="lblScore" style="font-size: 25px;">Score:</label>
+                    <output id="lblScore" type="text" style="font-size: 25px;">
+                    </p>
+                </div>
+                <div id="time">
+                    <p>
+                    <label for="lblTime" style="font-size: 25px;">Time:</label>
+                    <output id="lblTime" type="text" style="font-size: 25px;">
+                    </p>
+                </div>
+                <div id="live">
+                    <label for="lblLive" style="font-size: 25px;">Live:</label>
+                    <output id="lblLive" type="text" style="font-size: 25px;">
+                </div>
+                <p>
+                    <label for="up_settingsBoard">Up key:</label>
+                    <output type="text" id="up_settingsBoard" name="up_settingsBoard">
+                </p>
+                <p>
+                    <label for="down_settingsBoard">Down key:</label>
+                    <output type="text" id="down_settingsBoard" name="down_settingsBoard">
+                </p>
+                <p>
+                    <label for="right_settingsBoard">Right key:</label>
+                    <output type="text" id="right_settingsBoard" name="right_settingsBoard">
+                </p>
+                <p>
+                    <label for="left_settingsBoard">Left key:</label>
+                    <output type="text" id="left_settingsBoard" name="left_settingsBoard">
+                </p>
+                <p>
+                    <label for="ballsNumber_settingsBoard">Number of balls:</label>
+                    <output type="number" id="ballsNumber_settingsBoard" name="ballsNumber_settingsBoard" min=50 max=90
+                        value="50">
+                </p>
+                <p>
+                    <label for="Ball_5Point_settingsBoard">5 points ball:</label>
+                    <input type="color" id="Ball_5Point_settingsBoard" name="Ball_5Point_settingsBoard" value="#55aecc"
+                        disabled>
+                </p>
+                <p>
+                    <label for="Ball_15Point_settingsBoard">15 points ball:</label>
+                    <input type="color" id="Ball_15Point_settingsBoard" name="Ball_15Point_settingsBoard"
+                        value="#d275d5" disabled>
+                </p>
+                <p>
+                    <label for="Ball_25Point_settingsBoard">25 points ball:</label>
+                    <input type="color" id="Ball_25Point_settingsBoard" name="Ball_25Point_settingsBoard"
+                        value="#43e45b" disabled>
+                </p>
+                <p>
+                    <!-- <label>time for the game (measured in seconds):</label> -->
+                    <output type="number" id="gameTimer_settingsBoard" name="gameTimer_settingsBoard" min="60"
+                        value="60" hidden>
+                </p>
+                <p>
+                    <label>Number of monsters:</label>
+                    <output type="number" id="monstersNumber_settingsBoard" name="monstersNumber_settingsBoard" min="1"
+                        max="4" value="1"><br>
+                </p>
+            </div>
+
+            <div id="gameAudio">
+                <audio loop muted id="pacmanSong">
+                    <source src="./resource/audio/PacMan.mp3" type="audio/mp3">Your browser does not support the audio
+                    tag.
+                </audio>
+                <audio muted id="pacmanDeathSong">
+                    <source src="./resource/audio/Pacman-death-sound.mp3" type="audio/mp3">Your browser does not support the audio
+                    tag.
+                </audio>
+                <audio  muted id="applauseSong">
+                    <source src="./resource/audio/applause2.mp3" type="audio/mp3">Your browser does not support the audio
+                    tag.
+                </audio>
+                <audio muted id="loseSong">
+                    <source src="./resource/audio/pac_eaten.mp3" type="audio/mp3">Your browser does not support the audio
+                    tag.
+                </audio>
+            </div>
+
+            <div>
+                <label id="gameUser"></label>
+            </div>
+
+            <div id="game" >
+               
+                <canvas id="canvas" width="600" height="600" style="border:2px solid gray;"></canvas>
+                <img id="imgPlus" src="./resource/css/img/plus.png" hidden>
+                <img id="imgMonster" src="./resource/css/img/20.png" hidden>
+                <img id="imgTime" src="./resource/css/img/time.png" hidden>
+                <img id="wall" src="./resource/css/img/wall.PNG" hidden>
+                <img id="cherry" src="./resource/css/img/cherry.png" hidden>
+
+
+            </div>
+
+        </div>
+
+        <!-- New Game -->
+        <!-- <div id="newGame">
+            <p>
+                <button type="button" onclick="startNewGame()">New Game</button>
+            </p>
+        </div> -->
+
+        <div id="endGame" >
+
+            <div id="winGame">
+
+                <label class="scoreUser"></label>
+                <label id="winLabel">Winner!!!</label>
+
+                <div class="modal-content" id="modal_win"  tabindex="-1" role="dialog" aria-hidden="true">
+                    <div class="modal-body">
+                        <label class="scoreUser"></label>
+                        <p>Winner!!!</p>
+                        <video  width="400" loop autoplay>
+                            <source src="./resource/video/winner.mp4" mute="muted" type="video/mp4">
+                            Your browser does not support HTML5 video.
+                        </video>
+                            <div id="newGame" >
+                                
+                                <button id="submitBtn" type="button" aria-hidden="true" class="submit" data-dismiss="modal"
+                                onclick="restartGame()" >New Game</button>
+                            </div>
+                       
+                    </div>
+                </div>
+                <!-- <video id="winVideo" width="400" loop autoplay>
+                    <source src="./resource/video/1.mp4" mute="muted" type="video/mp4">
+                    Your browser does not support HTML5 video.
+                </video> -->
+            </div>
+
+            <div id="loseGameScore">
+                <!-- <label class="scoreUser"></label> -->
+                <!-- <label id="loseScoreLabel"></label> -->
+
+                <div class="modal-content" id="modal_loseScore"  tabindex="-1" role="dialog" aria-hidden="true">
+                    <div class="modal-body">
+                        <label class="scoreUser"></label>
+                        <br>
+                        <p id="loseScoreLabel"></p>
+                        <video  width="400" loop autoplay>
+                            <source src="./resource/video/loser.mp4" mute="muted" type="video/mp4">
+                            Your browser does not support HTML5 video.
+                        </video>
+                            <div id="newGame" >
+                                
+                                <button id="submitBtn" type="button" aria-hidden="true"class="submit" data-dismiss="modal"
+                                onclick="restartGame()" >New Game</button>
+                            </div>
+                       
+                    </div>
+                </div>
+
+                <!-- <video id="loseVideo" width="400" loop controls autoplay>
+                    <source src="./resource/video/1.mp4" mute="muted" type="video/mp4">
+                    Your browser does not support HTML5 video.
+                </video> -->
+            </div>
+
+            <div id="loseGameGhosts">
+                <!-- <label class="scoreUser"></label>
+                <label id="loseGhostsLabel">Loser!</label> -->
+
+                <div class="modal-content" id="modal_loseGhosts"  tabindex="-1" role="dialog" aria-hidden="true">
+                    <div class="modal-body">
+                        <label class="scoreUser"></label>
+                        <p>Loser!</p>
+                        <video  width="400" loop autoplay>
+                            <source id="loseGhostsvideo" src="./resource/video/loser.mp4" mute="muted" type="video/mp4">
+                            Your browser does not support HTML5 video.
+                        </video>
+                            <div id="newGame" >
+                                
+                                <button id="submitBtn" type="button" aria-hidden="true" class="submit" data-dismiss="modal"
+                                onclick="restartGame()" >New Game</button>
+                            </div>
+                       
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+<!-- Footer Page div -->
+<div class="FooterPage" id="footer">
+
+    <!-- DORON -->
+    <p class="footerInfo" style="float: left;" >Doron: <br></p>
+    <a href="https://www.facebook.com/doron.shamay" class="facebook"><i class="fa fa-facebook" style="float: left;"></i></a>
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=shamai.doron@gmail.com" class="google"><i class="fa fa-google" style="float: left;"></i></a>
+    <a href="https://github.com/shamaid" class="github"><i class="fa fa-github" style="float: left;"></i></a>
+
+
+   <!-- OSCAR -->
+   
+    <!-- <a href="https://www.facebook.com/osacrepshtein" class="fa fa-facebook" style="float: right;"></a> -->
+    <a href="https://www.facebook.com/osacrepshtein" class="facebook"><i class="fa fa-facebook" style="float: right;"></i></a>
+    <a href="https://www.linkedin.com/in/oscar-epshtein-7ba228137/" class="linkedin"><i class="fa fa-linkedin" style="float: right;"></i></a>
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=oscar.epsh@gamil.com" class="google"><i class="fa fa-google" style="float: right;"></i></a>
+    <a href="https://github.com/Oscareps" class="github"><i class="fa fa-github" style="float: right;"></i></a>
+    <p class="footerInfo" style="float: right;">Oscar: <br></p>
+    <p id="footerText">This pacman created by Oscar & Doron</p>
+    
+    
+</div>
+
+
+    </div>
+
+
+
+
+    
+
+
+</body>
+
+</html>
